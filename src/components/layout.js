@@ -1,10 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import React, {
+  useState,
+  useEffect
+} from 'react';
+import {
+  StaticQuery,
+  graphql
+} from 'gatsby';
 import PropTypes from 'prop-types';
-import { Head, Loader, Nav, Social, Footer } from '@components';
+import {
+  Head,
+  Nav,
+  Social,
+  Footer
+} from '@components';
 import styled from 'styled-components';
-import { GlobalStyle, theme } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+import {
+  GlobalStyle,
+  theme
+} from '@styles';
+const {
+  colors,
+  fontSizes,
+  fonts
+} = theme;
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -12,7 +30,7 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
-const SkipToContent = styled.a`
+const SkipToContent = styled.a `
   position: absolute;
   top: auto;
   left: -999px;
@@ -44,13 +62,16 @@ const SkipToContent = styled.a`
     z-index: 99;
   }
 `;
-const StyledContent = styled.div`
+const StyledContent = styled.div `
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `;
 
-const Layout = ({ children, location }) => {
+const Layout = ({
+  children,
+  location
+}) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
@@ -69,9 +90,9 @@ const Layout = ({ children, location }) => {
     }
   }, [isLoading]);
 
-  return (
-    <StaticQuery
-      query={graphql`
+  return ( <
+    StaticQuery query = {
+      graphql `
         query LayoutQuery {
           site {
             siteMetadata {
@@ -81,29 +102,35 @@ const Layout = ({ children, location }) => {
             }
           }
         }
-      `}
-      render={({ site }) => (
-        <div id="root">
-          <Head metadata={site.siteMetadata} />
-
-          <GlobalStyle />
-
-          <SkipToContent href="#content">Skip to Content</SkipToContent>
-
-          {isLoading && isHome ? (
-            <Loader finishLoading={() => setIsLoading(false)} />
-          ) : (
-            <StyledContent>
-              <Nav isHome={isHome} />
-              <Social isHome={isHome} />
-              <div id="content">
-                {children}
-                <Footer />
-              </div>
-            </StyledContent>
-          )}
-        </div>
-      )}
+      `
+    }
+    render = {
+      ({
+        site
+      }) => ( <div id = "root" >
+        <Head metadata = {
+          site.siteMetadata
+        }
+        />
+        <GlobalStyle / >
+        <SkipToContent href = "#content" > Skip to Content </SkipToContent>
+        <StyledContent >
+        <Nav isHome = {
+              isHome
+            }
+            /> 
+        <Social isHome = {
+              isHome
+            }
+            /> 
+        <div id = "content" > {
+              children
+            } 
+        <Footer / >
+        </div> 
+        </StyledContent> </div>
+      )
+    }
     />
   );
 };
