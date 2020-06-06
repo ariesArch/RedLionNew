@@ -9,7 +9,7 @@ module.exports = {
   googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
   name: 'Red Lion',
-  location: 'Yangon, Myanmar',
+  location: 'Boston, MA',
   email: 'redlion@gmail.com',
   github: 'https://github.com/',
   twitterHandle: '@',
