@@ -16,9 +16,8 @@ const StyledContainer = styled.header`
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: ${colors.navy};
   transition: ${theme.transition};
-  z-index: 11;
+  z-index: 9999;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -36,7 +35,7 @@ const StyledNav = styled.nav`
   ${mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: ${colors.lightestSlate};
+  color: ${colors.darkGrey};
   font-family: ${fonts.SFMono};
   z-index: 12;
 `;
@@ -140,11 +139,13 @@ const StyledList = styled.ol`
 const StyledListItem = styled.li`
   margin: 0 10px;
   position: relative;
-  font-size: ${fontSizes.smish};
+  font-size: ${fontSizes.h3};
+  color: ${colors.darkGrey};
+  font-weight:bold;
   &:before {
     text-align: right;
     color: ${colors.green};
-    font-size: ${fontSizes.xs};
+    font-size: ${fontSizes.xxl};
   }
 `;
 const StyledListLink = styled(Link)`

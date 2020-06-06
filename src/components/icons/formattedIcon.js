@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   IconFacebook,
-  IconGitHub,
   IconLinkedin,
   IconTwitter,
 } from '@components/icons';

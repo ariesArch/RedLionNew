@@ -83,7 +83,7 @@ const StyledTabButton = styled.button`
   `};
   &:hover,
   &:focus {
-    background-color: ${colors.lightNavy};
+    // background-color: ${colors.lightNavy};
   }
 `;
 const StyledHighlight = styled.span`

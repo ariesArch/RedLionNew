@@ -50,7 +50,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: ${colors.highlight};
+    // background-color: ${colors.highlight};
+    background-color: ${colors.green};
   }
 
   #root {
@@ -67,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-weight: 600;
-    color: ${colors.lightestSlate};
+    color: ${colors.darkGrey};
     margin: 0 0 10px 0;
   }
 

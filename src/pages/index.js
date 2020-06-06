@@ -16,6 +16,7 @@ const IndexPage = ({ location, data }) => (
       <About data={data.about.edges} />
       <Services data={data.services.edges} />
       <Team data={data.team.edges} />      
+      <Projects data={data.projects.edges} /> 
       <Contact data={data.contact.edges} />
     </StyledMainContainer>
   </Layout>
@@ -38,6 +39,13 @@ export const pageQuery = graphql`
             name
             subtitle
             contactText
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
           html
         }
