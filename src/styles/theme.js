@@ -2,7 +2,7 @@ const theme = {
   colors: {
     dark: '#000007',
     darkestNavy: '#01050b',
-    darkNavy: '#020c1b',
+    darkNavy: '#b8edf1',
     navy: '#0a192f',
     lightNavy: '#172a45',
     darkGrey: '#333f58',

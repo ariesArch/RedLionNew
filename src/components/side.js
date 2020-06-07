@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { theme, media } from '@styles';
-const { colors } = theme;
+const { colors,fonts } = theme;
 
 const StyledContainer = styled.div`
   width: 40px;
   position: fixed;
   bottom: 0;
+  background-color:${colors.darkNavy};
   left: ${props => (props.orientation === 'left' ? '40px' : 'auto')};
   right: ${props => (props.orientation === 'left' ? 'auto' : '40px')};
   z-index: 10;
-  color: ${colors.lightSlate};
+  color: ${colors.darkGrey};
+  font-family: ${fonts.SFMono};
   ${media.desktop`right: 25px;`};
   ${media.tablet`display: none;`};
 `;

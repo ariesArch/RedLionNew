@@ -15,7 +15,8 @@ const StyledContainer = styled.header`
   ${mixins.flexBetween};
   position: fixed;
   top: 0;
-  padding: 0px 50px;
+  padding: 0px 50px;  
+  background-color: ${colors.darkNavy};
   transition: ${theme.transition};
   z-index: 9999;
   filter: none !important;
